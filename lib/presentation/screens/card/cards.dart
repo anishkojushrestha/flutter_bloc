@@ -1,13 +1,13 @@
 part of 'card_imports.dart';
 
-class Card extends StatefulWidget {
-  const Card({super.key});
+class Cards extends StatefulWidget {
+  const Cards({super.key});
 
   @override
-  State<Card> createState() => _CardState();
+  State<Cards> createState() => _CardState();
 }
 
-class _CardState extends State<Card> {
+class _CardState extends State<Cards> {
   final CardBloc cardBloc = CardBloc();
 
   @override

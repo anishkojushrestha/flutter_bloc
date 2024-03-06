@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:simplecardbloc/presentation/screens/card/bloc/card_bloc.dart';
 import 'package:simplecardbloc/presentation/screens/home/home_models.dart';
+import 'package:simplecardbloc/presentation/screens/wishlist/bloc/wishlist_bloc.dart';
 
-class CardTile extends StatelessWidget {
+class WishTile extends StatelessWidget {
   final HomeModels homeModels;
-  const CardTile({super.key, required this.homeModels, required this.cardBloc});
-  final CardBloc cardBloc;
+  const WishTile(
+      {super.key, required this.homeModels, required this.wishlistBloc});
+  final WishlistBloc wishlistBloc;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +44,7 @@ class CardTile extends StatelessWidget {
                   onPressed: () {
                     // cardBloc.add(HomeProductCardButtonClickEvent(
                     //     homeModels: homeModels));
-                    cardBloc.add(CardRemoveEvent(homeModels: homeModels));
+                    wishlistBloc.add(WishRemoveEvent(homeModels: homeModels));
                   },
                   icon: const Icon(Icons.shopping_bag_outlined))
             ],
