@@ -7,6 +7,8 @@ class GenRouter {
         return MaterialPageRoute(builder: (context) => Home());
       case '/card':
         return MaterialPageRoute(builder: (context) => Card());
+      case '/wish':
+        return MaterialPageRoute(builder: (context) => WishList());
 
       default:
         return MaterialPageRoute(builder: (context) => Home());
